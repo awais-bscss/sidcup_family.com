@@ -21,6 +21,25 @@ html {
   background-color: #ffffff;
   color: #91b508;
 }
+#curser {
+  height: 20px;
+  width: 20px;
+  background-color: #91b508;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+}
+#curser-blur {
+  height: 200px;
+  width: 200px;
+  background-color: #91b508;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  filter: blur(80px);
+  pointer-events: none;
+}
 #nav {
   width: 100%;
   height: 20%;
@@ -62,6 +81,7 @@ video {
   justify-content: center;
   color: #ffffff;
   text-align: center;
+  z-index: 10;
 }
 #page_1 h1 {
   font-size: 5.6em;
@@ -92,4 +112,28 @@ video {
 #page_2 {
   height: 100vh;
   width: 100%;
+}
+#scroll {
+  background-color: #91b508;
+  white-space: nowrap;
+}
+#scroll_1 {
+  display: inline-block;
+  white-space: nowrap;
+}
+#scroll_2 {
+  display: inline-block;
+  white-space: nowrap;
+}
+#scroll h4 {
+  color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 5.9em;
+  text-align: center;
+  padding: 1em 0;
+  display: inline-block;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #ffffff;
+  margin-right: 12px;
 }
