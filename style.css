@@ -16,6 +16,11 @@ body,
 html {
   height: 100%;
   width: 100%;
+  /* perspective: 400px; */
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* background-color: #91b508; */
 }
 ::selection {
   background-color: #ffffff;
@@ -72,7 +77,7 @@ video {
   background-color: #7473731a;
 }
 #page_1 {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   /* background-color: #91b508; */
   display: flex;
@@ -82,6 +87,7 @@ video {
   color: #ffffff;
   text-align: center;
   z-index: 10;
+  position: relative;
 }
 #page_1 h1 {
   font-size: 5.6em;
@@ -110,23 +116,32 @@ video {
   width: 53%;
 }
 #page_2 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 #scroll {
-  background-color: #91b508;
+  /* background-color: #91b508; */
   white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroll::-webkit-scrollbar {
+  display: none;
 }
 #scroll_1 {
   display: inline-block;
   white-space: nowrap;
+  animation-name: animate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
 }
-#scroll_2 {
-  display: inline-block;
-  white-space: nowrap;
-}
+
 #scroll h4 {
-  color: transparent;
+  color: #000;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 5.9em;
@@ -134,6 +149,140 @@ video {
   padding: 1em 0;
   display: inline-block;
   font-weight: 900;
-  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 1px #fbfcf9;
   margin-right: 12px;
+  font-family: "Gilroy", sans-serif;
+  transition: all linear 0.5s;
+}
+#scroll h4:hover {
+  color: #91b508;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#about {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ffffff; */
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  gap: 5em;
+}
+#about .img_1 {
+  width: 10%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#about-text {
+  width: 50%;
+  text-align: center;
+}
+#about-text h2 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#about-text p {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#about .img_2 {
+  width: 10%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#card_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background-color: #000000;
+  /* z-index: -1; */
+  padding: 30px;
+  margin-top: 100px;
+}
+#card_container .card {
+  width: 30%;
+  height: 100%;
+  /* background-color: #ffffff; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid #91b508; */
+  z-index: 10;
+  background-size: cover;
+  /* object-fit: cover; */
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#card1 {
+  background-image: url(./images/home-lessons-1024x682.avif);
+}
+#card2 {
+  background-image: url(./images/home-toptracer-1024x682.webp);
+}
+#card3 {
+  background-image: url(./images/hero-5-1002x1024.avif);
+}
+.hover_div {
+  width: 100%;
+  height: 100%;
+  background-color: #91b508;
+  border-radius: 10px;
+  opacity: 0;
+  padding: 30px;
+  line-height: 30px;
+  /* transition: opacity 0.3s ease-in-out; */
+}
+.hover_div h4 {
+  color: #000;
+  font-size: 2em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.hover_div:hover {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+#card_container .card:hover {
+  transform: rotate3d(1, 1, 0.1, 15deg);
+}
+#dot_div {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to top right, #97c41e, #43ac2f);
+  margin-top: 50px;
+  text-align: center;
+}
+#dot_div img {
+  width: 12%;
+  height: 100%;
+  object-fit: cover;
+}
+#dot_div h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
