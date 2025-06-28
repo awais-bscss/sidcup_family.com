@@ -19,8 +19,13 @@ html {
   /* perspective: 400px; */
 }
 body::-webkit-scrollbar {
-  display: none;
+  display: block;
   /* background-color: #91b508; */
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #91b508;
+  border-radius: 10px;
 }
 ::selection {
   background-color: #ffffff;
@@ -114,6 +119,32 @@ video {
   font-size: 1.2em;
   font-weight: 400;
   width: 53%;
+}
+#page_1 .arrow {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #91b508;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -25px;
+  left: -1%;
+  /* left: calc(50% - 25px); */
+  cursor: pointer;
+  background-color: transparent;
+}
+#page_1 .arrow i {
+  color: #fff;
+  font-size: 2em;
+  /* transition: all linear 0.5s; */
+}
+#page_1 .arrow:hover {
+  height: 60px;
+  width: 60px;
+  background-color: #91b508;
+  transition: all linear 0.5s;
 }
 #page_2 {
   min-height: 100vh;
@@ -285,4 +316,199 @@ video {
   font-size: 1.5rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+#page_3 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+#page_3 p {
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 55%;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+#page_3 img {
+  /* width: 20%; */
+  height: 5%;
+  object-fit: cover;
+  margin-top: 20px;
+  position: absolute;
+}
+#page_3 #colon1 {
+  top: 20%;
+  right: 80%;
+}
+/* #page_3 img:nth-child(2) {
+  top: 20%;
+  right: 80%;
+} */
+#page_3 #colon2 {
+  bottom: 25%;
+  right: 18%;
+}
+#page_4 {
+  height: 50vh;
+  width: 100%;
+  /* background-color: #91b508; */
+  background-color: #000;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+}
+#page_4 h1 {
+  position: absolute;
+  font-size: 72px;
+  top: 3%;
+  color: black;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Gilroy", sans-serif;
+}
+#page_4 #elem {
+  width: 27%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+  /* z-index: 10; */
+  position: relative;
+}
+
+#page_4 #elem h2 {
+  width: 100%;
+  height: 100%;
+  background-color: #91b508;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 800;
+  position: absolute;
+  z-index: 10;
+}
+#page_4 #elem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+#page_4 #elem:hover h2 {
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+}
+#page_4 #elem:hover img {
+  scale: 1;
+  transition: all 0.5s ease-in-out;
+}
+#footer {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  position: relative;
+  /* z-index: 10; */
+  background: linear-gradient(to top right, #97c41e, #43ac2f);
+  position: relative;
+  z-index: 10;
+}
+#footer .f1 {
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+#footer .f1 .dots {
+  position: absolute;
+  left: 0%;
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+#footer .f1 .logo {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  width: 25%;
+  height: 25%;
+}
+#footer .f1 #links {
+  position: absolute;
+  bottom: 25%;
+  left: 9%;
+  color: #000;
+  font-size: 2em;
+  font-weight: 400;
+  display: flex;
+}
+#footer .f2 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  position: absolute;
+  left: 30%;
+  top: -17%;
+  line-height: 40px;
+}
+#footer .f2 h3 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 800;
+}
+#footer .f3 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  position: absolute;
+  left: 54%;
+  top: -17%;
+  line-height: 40px;
+}
+#footer .f3 h3 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 800;
+}
+#footer .f4 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  position: absolute;
+  left: 75%;
+  top: -9%;
+  line-height: 30px;
+}
+#footer .f4 h2 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+#footer .f4 h3 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 800;
 }
