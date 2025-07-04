@@ -1,7 +1,7 @@
 Sidcup Family Golf Website
-Overview
+## Overview
 This is a website for Sidcup Family Golf, a golf venue in Sidcup, South East London. It showcases a Toptracer driving range, adventure golf, golf lessons, a café, and event hosting. The site is designed to be user-friendly, visually appealing, and interactive, with animations and a custom cursor effect.
-Features
+## Features
 
 Navigation Bar: A fixed navigation bar with links to different sections (Toptracer Range, Golf Lessons, Adventure Golf, Café, Events).
 Home Section: Displays a welcoming message with a background video and an animated arrow for scrolling.
@@ -12,7 +12,7 @@ Testimonial Section: Features customer feedback with decorative quote images.
 Call-to-Action Section: Promotes key activities with hover effects on images and text.
 Footer: Contains links, contact details, and venue address for easy navigation.
 
-Technologies Used
+## Technologies Used
 
 HTML: Structure of the website.
 CSS: Styling with custom fonts (Montserrat) and responsive design.
@@ -20,27 +20,21 @@ JavaScript: Adds interactivity, including a custom cursor and scroll animations 
 GSAP (GreenSock Animation Platform): For smooth scroll-triggered animations.
 Git LFS: Used for managing large files like videos and images (configured in .gitattributes).
 
-File Structure
+##   File Structure
 
 index.html: Main HTML file with the website's structure.
 style.css: CSS file for styling the website and custom cursor effects.
 script.js: JavaScript file for cursor movement, hover effects, and GSAP animations.
 .gitattributes: Configures Git LFS for handling large media files (e.g., .mp4).
 
-How to Run
+## How to Run
 
 Clone the repository.
 Ensure Git LFS is installed to handle large files.
 Open index.html in a web browser.
 Make sure the Montserrat font files and media assets (images, videos) are in the correct folders as referenced in the code.
 
-Notes
-
-The website is cashless, as mentioned in the About section.
-The driving range closes at 10 PM, with last balls at 9 PM.
-External libraries like GSAP are used for animations, so an internet connection is required for full functionality.
-
-Future Improvements
+## Future Improvements
 
 Add responsive design for mobile devices.
 Optimize images and videos for faster loading.
